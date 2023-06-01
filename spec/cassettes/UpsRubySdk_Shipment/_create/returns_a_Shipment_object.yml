@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://wwwcie.ups.com/api/shipments/v2205/ship
+    body:
+      encoding: UTF-8
+      string: '{"ShipmentRequest":{"Request":{"SubVersion":"2205","RequestOption":"nonvalidate","TransactionReference":{"CustomerContext":""}},"Shipment":{"Description":"Ship
+        WS test","Shipper":{"Name":"ShipperName","AttentionName":"ShipperZs Attn Name","TaxIdentificationNumber":"123456","Phone":{"Number":"1115554758","Extension":"
+        "},"ShipperNumber":"AAAAAA","FaxNumber":"8002222222","Address":{"AddressLine":"2311
+        York Rd","City":"Timonium","StateProvinceCode":"MD","PostalCode":"21093","CountryCode":"US"}},"ShipTo":{"Name":"Happy
+        Dog Pet Supply","AttentionName":"1160b_74","Phone":{"Number":"9225377171"},"Address":{"AddressLine":"123
+        Main St","City":"timonium","StateProvinceCode":"MD","PostalCode":"21030","CountryCode":"US"},"Residential":"
+        "},"ShipFrom":{"Name":"T and T Designs","AttentionName":"1160b_74","Phone":{"Number":"1234567890"},"FaxNumber":"1234567890","Address":{"AddressLine":"2311
+        York Rd","City":"Alpharetta","StateProvinceCode":"GA","PostalCode":"30005","CountryCode":"US"}},"PaymentInformation":{"ShipmentCharge":{"Type":"01","BillShipper":{"AccountNumber":"AAAAAA"}}},"Service":{"Code":"03","Description":"Express"},"Package":{"Description":"
+        ","Packaging":{"Code":"02","Description":"Nails"},"Dimensions":{"UnitOfMeasurement":{"Code":"IN","Description":"Inches"},"Length":"10","Width":"30","Height":"45"},"PackageWeight":{"UnitOfMeasurement":{"Code":"LBS","Description":"Pounds"},"Weight":"5"}}},"LabelSpecification":{"LabelImageFormat":{"Code":"EPL","Description":"EPL"},"HTTPUserAgent":"Mozilla/4.5","LabelStockSize":{"Width":"4","Height":"6"}}}}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '600'
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Bkndtransid:
+      - ciewssoas6d72x1WRWDvd9
+      Referrer-Policy:
+      - same-origin
+      Content-Type:
+      - application/json;charset=UTF-8
+      X-Request-Id:
+      - fc317b63-a2c0-4fae-b136-ea0a7d0c1f0f
+      Content-Length:
+      - '4044'
+      Expires:
+      - Mon, 12 Jun 2023 18:18:59 GMT
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Pragma:
+      - no-cache
+      Date:
+      - Mon, 12 Jun 2023 18:18:59 GMT
+      Connection:
+      - keep-alive
+      Server-Timing:
+      - ak_p; desc="468498_1752941709_331284665_84111_161289_32_-_-";dur=1
+      - cdn-cache; desc=MISS
+      - edge; dur=86
+      - origin; dur=754
+      Ak-Grn-1:
+      - 0.8dc47b68.1686593938.13bf00b9
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"ShipmentResponse":{"Response":{"ResponseStatus":{"Code":"1", "Description":"Success"},
+        "Alert":{"Code":"129001", "Description":"Additional Handling has automatically
+        been set on Package 1."}, "TransactionReference":{"CustomerContext":""}},
+        "ShipmentResults":{"ShipmentCharges":{"TransportationCharges":{"CurrencyCode":"USD",
+        "MonetaryValue":"79.15"}, "ServiceOptionsCharges":{"CurrencyCode":"USD", "MonetaryValue":"20.50"},
+        "TotalCharges":{"CurrencyCode":"USD", "MonetaryValue":"99.65"}}, "BillingWeight":{"UnitOfMeasurement":{"Code":"LBS",
+        "Description":"Pounds"}, "Weight":"98.0"}, "ShipmentIdentificationNumber":"1ZXXXXXXXXXXXXXXXX",
+        "PackageResults":{"TrackingNumber":"1ZXXXXXXXXXXXXXXXX", "BaseServiceCharge":{"CurrencyCode":"USD",
+        "MonetaryValue":"66.91"}, "ServiceOptionsCharges":{"CurrencyCode":"USD", "MonetaryValue":"20.50"},
+        "ShippingLabel":{"ImageFormat":{"Code":"EPL", "Description":"EPL"}, "GraphicImage":"STgsQSwwMDEKT0QKcTgxMgpRMTYwMCwyNApTMgpEMTAKSkYKTgpaVApBMTUsNywwLDIsMSwxLE4sIlNISVBQRVJaUyBBVFROIE5BTUUiCkExNSwyNywwLDIsMSwxLE4sIjExMTU1NTQ3NTgiCkExNSw0NywwLDIsMSwxLE4sIlNISVBQRVJOQU1FIgpBMTUsNjcsMCwyLDEsMSxOLCIyMzExIFlPUksgUkQiCkExNSw4NywwLDIsMSwxLE4sIlRJTU9OSVVNICBNRCAyMTA5MyIKQTE1LDE0MiwwLDQsMSwxLE4sIlNISVAgVE86ICIKQTYxLDE2NiwwLDQsMSwxLE4sIjExNjBCXzc0IgpBNjEsMTk0LDAsNCwxLDEsTiwiOTIyNTM3NzE3MSIKQTYxLDIyMiwwLDQsMSwxLE4sIkhBUFBZIERPRyBQRVQgU1VQUExZIgpBNjEsMjUxLDAsNCwxLDEsTiwiMTIzIE1BSU4gU1QiCkE2MSwyNzksMCw0LDEsMixOLCJUSU1PTklVTSAgTUQgIDIxMDMwIgpBNDQ2LDksMCwzLDEsMixOLCI1IExCUyIKQTY3NSw5LDAsNCwxLDEsTiwiMSBPRiAxIgpBNTA4LDUxLDAsMywxLDEsTiwiRFdUOiA0NSwzMCwxMCIKQTUwOCw3MywwLDMsMSwxLE4sIkFIIgpBNTk5LDM2OSwwLDMsMiwyLE4sIlNBTVBMRSIKQTY4LDUxMywwLDMsMSwxLE4sIlVQUyBNQVhJQ09ERSIKQTc1LDUzMywwLDMsMSwxLE4sIlBSSU5UUyBIRVJFIgpBMzQyLDQzNiwwLDMsMSwyLE4sIlVQUyBST1VUSU5HIENPREUgUFJJTlRTIEhFUkUiCkEzMDAsNTI0LDAsMywxLDIsTiwiVVBTIFBPU1RBTCBCQVJDT0RFIFBSSU5UUyBIRVJFIgpBMTAsMTAzMSwwLDMsMSwxLE4sIkJJTExJTkc6IFAvUCIKQTQxNiwxMDMxLDAsNCwxLDIsTiwiU0FNUExFIgpBMTk2LDEyMDMsMCwxLDEsMSxOLCJYT0wgMjMuMDYuMDEgICAgICAgICAgTlY0NSAyNC4wQSAwNi8yMDIzKiIKQTksNjcwLDAsMywyLDIsTiwiVVBTIEdST1VORCIKQTksNzMxLDAsMywxLDEsTiwiVFJBQ0tJTkcgIzogVVBTIFRSQUNLSU5HIE5VTUJFUiBQUklOVFMgSEVSRSIKQTExNyw4NzMsMCwzLDEsMixOLCJVUFMgVFJBQ0tJTkcgTlVNQkVSIEJBUkNPREUgUFJJTlRTIEhFUkUiClg2ODksNjUwLDEyNCw4MTMsNzc1ClgwLDY0OCwxNCw4MTEsNjYyClgwLDQyMyw0LDgxMiw0MjcKWDI0NCw0MjMsNCwyNDgsNjQ4ClgwLDc3NCw1LDgxMiw3NzkKWDAsMTAxMywxNCw4MTIsMTAyNwpHVzYyOSwxMTQ3LDE5LDUyLAD///////////////////////+AAAAAAAAAAAAAAAAAAAP/////gAAAAAAAAAAAAAAAAAAD/////4AAAAAAAAAAAAAAAAAAA/////+AAAAAAAAAAAAAAAAAAAP/////h////////wP///////+D/////4f///////8D////////g/////+H/////+A/A/Af/////4P/////h//////gPwPwH/////+D/////4f/////wAEDAAf/////g/////+H/////8ABAwAH/////4P/////h/////8AAAAAAf////+D/////4f/////AAAAAAH/////g/////+H/////wfAAAfB/////4P/////h/////8HwAAHwf////+D/////4f/////wPAADgf/////g/////+H/////8DwAA4H/////4P/////h//////AAAAAB/////+D/////4f/////wAAAAAf/////g/////+H/////+AAAAAf/////4P/////h//////gAAAAH/////+D/////4AAAAAAAAAAAAAAAAAAA/////+AAAAAAAAAAAAAAAAAAAP/////gAAAAAAAAAAAAAAAAAAD/////4f//////4AAB///////g/////+H//////+AAAf//////4P/////h///////AAMB//////+D/////4f//////wADAf//////g/////+H/////+APA+Af/////4P/////h//////gDwPgH/////+D/////4f/////wD8D8Af/////g/////+H/////8A/A/AH/////4P/////h//////AfwP+B/////+D/////4f/////wH8D/gf/////g/////+H/////8f/A//H/////4P/////h//////H/wP/x/////+D/////4f///////8D////////g/////+H////////A////////4PAEPj/gAAAAAAAAAAAAAAAAAADwBD4/4AAAAAAAAAAAAAAAAAAA/jwcP+AAAAAAAAAAAAAAAAAAAP48HD/gAAAAAAAAAAAAAAAAAAD+PF0/4AAAAAAAAAAAAAAAAAAA/jxRP+AAAAAAAAAAAAAAAAAAAP48UT/////////////////////+PFE//////////////////////jxjP/////////////////////48Yz/////////////////////+PGM//////////////////////jxvP////////////////////////////////////////////////////////////////////////////8KUDEK"},
+        "ItemizedCharges":[{"Code":"432", "CurrencyCode":"USD", "MonetaryValue":"0.00"},
+        {"Code":"100", "CurrencyCode":"USD", "MonetaryValue":"20.50"}, {"Code":"376",
+        "CurrencyCode":"USD", "MonetaryValue":"0.00", "SubType":"Suburban"}, {"Code":"375",
+        "CurrencyCode":"USD", "MonetaryValue":"12.24"}]}}}}'
+  recorded_at: Mon, 12 Jun 2023 18:18:59 GMT
+recorded_with: VCR 6.0.0
