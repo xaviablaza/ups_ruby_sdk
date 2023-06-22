@@ -100,6 +100,9 @@ RSpec.describe UpsRubySdk::Rate do
                 },
                 "Weight": "1"
               }
+            },
+            "ShipmentRatingOptions": {
+              "NegotiatedRatesIndicator": "1"
             }
           }
         }

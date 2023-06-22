@@ -46,6 +46,17 @@ module UpsRubySdk
         total_charges_value = rated_shipment[:total_charges][:monetary_value]
         total_charges_currency = rated_shipment[:total_charges][:currency_code]
 
+        negotiated_charges = rated_shipment[:negotiated_charges]
+        negotiated_base_service_charge_value = negotiated_charges[:base_service_charge][:monetary_value]
+        negotiated_base_service_charge_currency = negotiated_charges[:base_service_charge][:currency_code]
+        negotiated_transportation_charge_value = negotiated_charges[:transportation_charges][:monetary_value]
+        negotiated_transportation_charge_currency = negotiated_charges[:transportation_charges][:currency_code]
+        negotiated_service_options_charge_value = negotiated_charges[:service_options_charges][:monetary_value]
+        negotiated_service_options_charge_currency = negotiated_charges[:service_options_charges][:currency_code]
+        negotiated_total_charge_value = negotiated_charges[:total_charge][:monetary_value]
+        negotiated_total_charge_currency = negotiated_charges[:total_charge][:currency_code]
+        negotiated_itemized_charges = negotiated_charges[:itemized_charges]
+
         #        rated_package = rated_shipment[:rated_package]
         #        rated_package_transportation_charge_value = rated_package[:transportation_charges][:monetary_value]
         #        rated_package_transportation_charge_currency = rated_package[:transportation_charges][:currency_code]
@@ -71,7 +82,16 @@ module UpsRubySdk
           service_options_charge_value,
           service_options_charge_currency,
           total_charges_value,
-          total_charges_currency
+          total_charges_currency,
+          negotiated_base_service_charge_value,
+          negotiated_base_service_charge_currency,
+          negotiated_transportation_charge_value,
+          negotiated_transportation_charge_currency,
+          negotiated_service_options_charge_value,
+          negotiated_service_options_charge_currency,
+          negotiated_total_charge_value,
+          negotiated_total_charge_currency,
+          negotiated_itemized_charges
         )
       end
 
@@ -98,7 +118,16 @@ module UpsRubySdk
       service_options_charge_value,
       service_options_charge_currency,
       total_charges_value,
-      total_charges_currency
+      total_charges_currency,
+      negotiated_base_service_charge_value=nil,
+      negotiated_base_service_charge_currency=nil,
+      negotiated_transportation_charge_value=nil,
+      negotiated_transportation_charge_currency=nil,
+      negotiated_service_options_charge_value=nil,
+      negotiated_service_options_charge_currency=nil,
+      negotiated_total_charge_value=nil,
+      negotiated_total_charge_currency=nil,
+      negotiated_itemized_charges=nil
     )
       @response_status_code = response_status_code
       @response_status_description = response_status_description 
@@ -119,6 +148,15 @@ module UpsRubySdk
       @service_options_charge_currency = service_options_charge_currency
       @total_charges_value = total_charges_value
       @total_charges_currency = total_charges_currency
+      @negotiated_base_service_charge_value = negotiated_base_service_charge_value
+      @negotiated_base_service_charge_currency = negotiated_base_service_charge_currency
+      @negotiated_transportation_charge_value = negotiated_transportation_charge_value
+      @negotiated_transportation_charge_currency = negotiated_transportation_charge_currency
+      @negotiated_service_options_charge_value = negotiated_service_options_charge_value
+      @negotiated_service_options_charge_currency = negotiated_service_options_charge_currency
+      @negotiated_total_charge_value = negotiated_total_charge_value
+      @negotiated_total_charge_currency = negotiated_total_charge_currency
+      @negotiated_itemized_charges = negotiated_itemized_charges
     end
     attr_reader :response_status_code, \
       :response_status_description, \
@@ -138,6 +176,15 @@ module UpsRubySdk
       :service_options_charge_value, \
       :service_options_charge_currency, \
       :total_charges_value, \
-      :total_charges_currency
+      :total_charges_currency, \
+      :negotiated_base_service_charge_value, \
+      :negotiated_base_service_charge_currency, \
+      :negotiated_transportation_charge_value, \
+      :negotiated_transportation_charge_currency, \
+      :negotiated_service_options_charge_value, \
+      :negotiated_service_options_charge_currency, \
+      :negotiated_total_charge_value, \
+      :negotiated_total_charge_currency, \
+      :negotiated_itemized_charges
   end
 end

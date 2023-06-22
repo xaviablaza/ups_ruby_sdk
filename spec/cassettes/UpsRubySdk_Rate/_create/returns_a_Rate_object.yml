@@ -72,7 +72,11 @@ http_interactions:
         "Description":"Pounds"}, "Weight":"0.0"}, "TransportationCharges":{"CurrencyCode":"USD",
         "MonetaryValue":"10.20"}, "BaseServiceCharge":{"CurrencyCode":"USD", "MonetaryValue":"0.00"},
         "ServiceOptionsCharges":{"CurrencyCode":"USD", "MonetaryValue":"0.00"}, "TotalCharges":{"CurrencyCode":"USD",
-        "MonetaryValue":"10.20"}, "RatedPackage":{"TransportationCharges":{"CurrencyCode":"USD",
+        "MonetaryValue":"10.20"}, "NegotiatedCharges": {"BaseServiceCharge": {"CurrencyCode": "USD","MonetaryValue": "8.40"},
+        "TransportationCharges": {"CurrencyCode": "USD","MonetaryValue": "17.11"},"ServiceOptionsCharges": {"CurrencyCode": "USD",
+        "MonetaryValue": "32.50"},"TotalCharge": {"CurrencyCode": "USD","MonetaryValue": "49.61"},"ItemizedCharges": [{
+        "Code": "432","CurrencyCode": "USD","MonetaryValue": "3.50"},{"Code": "100","CurrencyCode": "USD","MonetaryValue": "29.00",
+        "SubType": "Weight"},{"Code": "375","CurrencyCode": "USD","MonetaryValue": "6.09"}]}, "RatedPackage":{"TransportationCharges":{"CurrencyCode":"USD",
         "MonetaryValue":"10.20"}, "BaseServiceCharge":{"CurrencyCode":"USD", "MonetaryValue":"10.20"},
         "ServiceOptionsCharges":{"CurrencyCode":"USD", "MonetaryValue":"0.00"}, "ItemizedCharges":{"Code":"553",
         "CurrencyCode":"USD", "MonetaryValue":"0.00"}, "TotalCharges":{"CurrencyCode":"USD",
