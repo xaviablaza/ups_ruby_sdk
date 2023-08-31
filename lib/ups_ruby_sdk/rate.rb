@@ -32,8 +32,8 @@ module UpsRubySdk
 
         service_code = rated_shipment[:service][:code]
         service_description = rated_shipment[:service][:description]
-        alert_code = rated_shipment[:rated_shipment_alert][:code]
-        alert_description = rated_shipment[:rated_shipment_alert][:description]
+        # alert_code = rated_shipment[:rated_shipment_alert][:code]
+        # alert_description = rated_shipment[:rated_shipment_alert][:description]
         billing_weight = rated_shipment[:billing_weight][:weight]
         billing_weight_unit = rated_shipment[:billing_weight][:unit_of_measurement][:code]
         billing_weight_unit_description = rated_shipment[:billing_weight][:unit_of_measurement][:description]
@@ -70,8 +70,8 @@ module UpsRubySdk
           transaction_identifier,
           service_code,
           service_description,
-          alert_code,
-          alert_description,
+          # alert_code,
+          # alert_description,
           billing_weight,
           billing_weight_unit,
           billing_weight_unit_description,
@@ -164,8 +164,8 @@ module UpsRubySdk
       :transaction_identifier, \
       :service_code, \
       :service_description, \
-      :alert_code, \
-      :alert_description, \
+      # :alert_code, \
+      # :alert_description, \
       :billing_weight, \
       :billing_weight_unit, \
       :billing_weight_unit_description, \
