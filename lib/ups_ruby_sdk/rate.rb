@@ -46,7 +46,7 @@ module UpsRubySdk
         total_charges_value = rated_shipment[:total_charges][:monetary_value]
         total_charges_currency = rated_shipment[:total_charges][:currency_code]
 
-        negotiated_charges = rated_shipment[:negotiated_charges]
+        negotiated_charges = rated_shipment[:negotiated_rate_charges]
         negotiated_base_service_charge_value = negotiated_charges[:base_service_charge][:monetary_value]
         negotiated_base_service_charge_currency = negotiated_charges[:base_service_charge][:currency_code]
         negotiated_transportation_charge_value = negotiated_charges[:transportation_charges][:monetary_value]
